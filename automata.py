@@ -1,6 +1,5 @@
 import tkinter as tk
 
-# Definición de la función de transición
 def delta(current_state, char):
     transitions = {
     ("q0", '1'): "q1", ("q0", '2'): "q2", ("q0", '3'): "q2", ("q0", '4'): "q2",
@@ -103,8 +102,6 @@ def delta(current_state, char):
 
     return transitions.get((current_state, char.upper()))  
 
-
-# Función para validar la cadena con el autómata
 def validate_string(s):
     current_state = "q0"
     states_sequence = [current_state]
